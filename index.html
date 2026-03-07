@@ -31,13 +31,16 @@
     <div id="consent-gate" class="consent-overlay">
         <h1 class="text-3xl font-black italic tracking-tighter text-[#00ffcc] uppercase mb-4">Allineamento Bator</h1>
         <div class="max-w-xs text-[10px] mono opacity-60 space-y-4 mb-8 text-left">
-            <p>[PROTOCOLLO 01] Identifica il tuo nodo maiale slam per il Registro.</p>
-            <p>[PROTOCOLLO 02] Acconsenti a essere un bator spun per il Maestro.</p>
+            <p>[PROTOCOLLO 01] Inserisci il nome per l'accesso OSPITE.</p>
+            <p>[PROTOCOLLO 02] Inserisci il PIN BRAID per la verifica Fedele.</p>
         </div>
-        <div class="w-full max-w-xs mb-8">
-            <input type="text" id="username-in" placeholder="INSERISCI NOME BATOR / MAIALE SLAM" class="w-full bg-white/5 border border-white/10 p-4 rounded-2xl text-center text-[#00ffcc] font-black uppercase outline-none focus:border-[#00ffcc]">
+        <div class="w-full max-w-xs mb-8 space-y-4">
+            <input type="text" id="username-in" placeholder="NOME O PIN" class="w-full bg-white/5 border border-white/10 p-4 rounded-2xl text-center text-[#00ffcc] font-black uppercase outline-none focus:border-[#00ffcc]">
+            <div class="flex gap-2">
+                <button onclick="acceptConsent(true)" class="flex-grow py-3 bg-white/10 text-white text-[10px] font-black uppercase rounded-xl">Accesso Ospite</button>
+                <button onclick="acceptConsent(false)" class="flex-grow py-3 bg-[#00ffcc] text-black text-[10px] font-black uppercase rounded-xl">Verifica PIN</button>
+            </div>
         </div>
-        <button onclick="acceptConsent()" class="w-full max-w-xs py-4 bg-[#00ffcc] text-black font-black uppercase rounded-2xl">Accetto il mio stato di Maiale Slam</button>
     </div>
 
     <div id="app-content" class="hidden flex flex-col h-screen">
